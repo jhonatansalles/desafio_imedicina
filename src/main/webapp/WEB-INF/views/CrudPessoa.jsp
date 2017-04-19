@@ -3,28 +3,6 @@
 <html>
   <head>  
     <title>CRUD Pessoa - Desafio entrevista iMedicina</title>  
-    <style>
-      .username.ng-valid {
-          background-color: lightgreen;
-      }
-      .username.ng-dirty.ng-invalid-required {
-          background-color: red;
-      }
-      .username.ng-dirty.ng-invalid-minlength {
-          background-color: yellow;
-      }
-
-      .email.ng-valid {
-          background-color: lightgreen;
-      }
-      .email.ng-dirty.ng-invalid-required {
-          background-color: red;
-      }
-      .email.ng-dirty.ng-invalid-email {
-          background-color: yellow;
-      }
-
-    </style>
     
     <script type="text/javascript">
 	    $('telefone').mask("(99) 9999-9999?9").ready(function(event) {
@@ -140,12 +118,13 @@
                           <div class="form-group col-md-12">
                               <label class="col-md-2 control-lable" for="file">* Telefone</label>
                               <div class="col-md-7">
-                                  <input type="tel" ng-model="ctrl.pessoa.telefone" class="form-control input-sm" name="telefone"
-                                  	placeholder="Digite seu telefone." required id="telefone"/>
+                                  <input type="text" ng-model="ctrl.pessoa.telefone" class="form-control input-sm" name="telefone"
+                                  	placeholder="Digite seu telefone." required id="telefone" maxlength="11" ng-minlength="10"/>
                                   	
                                   	<div class="has-error" ng-show="myForm.$dirty">
                                       <span ng-show="myForm.telefone.$error.required">Campo obrigatório.<br /></span>
-                                      <span ng-show="myForm.email.$invalid">Este campo é inválido!</span>
+                                      <span ng-show="myForm.telefone.$error.minlength">O tamanho mínimo é de 10 números.<br /></span>
+                                      <span ng-show="myForm.telefone.$invalid && !myForm.telefone.$error.required">Este campo é inválido!</span>
                                   </div>
                               </div>
                           </div>

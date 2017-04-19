@@ -39,3 +39,43 @@ body, .form-control{
 .custom-width {
     width: 80px !important;
 }
+
+.nome.ng-valid {
+    background-color: lightgreen;
+}
+.nome.ng-dirty.ng-invalid-required {
+    background-color: red;
+}
+.username.ng-dirty.ng-invalid-minlength {
+    background-color: yellow;
+}
+
+.data.ng-valid {
+    background-color: lightgreen;
+}
+.data.ng-dirty.ng-invalid-required {
+    background-color: red;
+}
+.data.ng-dirty.ng-invalid-data {
+    background-color: yellow;
+}
+
+.email.ng-valid {
+    background-color: lightgreen;
+}
+.email.ng-dirty.ng-invalid-required {
+    background-color: red;
+}
+.email.ng-dirty.ng-invalid-email {
+    background-color: yellow;
+}
+
+.telefone.ng-valid {
+    background-color: lightgreen;
+}
+.telefone.ng-dirty.ng-invalid-required {
+    background-color: red;
+}
+.telefone.ng-dirty.ng-invalid-minlength {
+    background-color: yellow;
+}
